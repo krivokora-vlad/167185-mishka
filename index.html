@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
   <header class="header">
     <a class="logo">
-      <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
+      <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
     </a>
     <nav class="main-menu">
-      <a href="#" class="main-menu__open-menu main-menu_close-menu">&#9776;</a>
+      <a href="#" class="main-menu__open-menu main-menu__close-menu"></a>
       <ul class="main-menu__menu-list">
+        <li class="main-menu__menu-item"><a href="catalog.html" class="main-menu__menu-link">Каталог товаров</a></li>
         <li class="main-menu__menu-item"><a href="form.html" class="main-menu__menu-link">Вязание на заказ</a></li>
         <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Поиск по сайту</a></li>
         <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Корзина: пока пуста</a></li>
@@ -51,7 +53,7 @@
             <td class="goods__table-cell">15 см</td>
           </tr>
         </table>
-        <img class="goods__img" src="http://placehold.it/260x315" width="260" height="315" alt="Товар недели">
+        <img class="goods__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Товар недели">
         <span class="goods__price">Цена: 990 руб.</span>
         <a class="btn  btn--goods-order" href="#">Заказать</a>
       </div>
@@ -59,7 +61,7 @@
     <section class="about">
       <div class="about__wrapper">
         <h2 class="about__title">Коротко о нас:</h2>
-        <ul class="about__items">
+        <ul class="about__list">
           <li class="about__item  about__item--flower">Экологически чистые материалы</li>
           <li class="about__item  about__item--money">Скандинавский стиль по российской цене</li>
           <li class="about__item  about__item--like">Увеличивает лайки на фотографиях</li>
@@ -93,7 +95,7 @@
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__email">
           <span class="contacts__email-title">e-mail:</span>
-          <a class="contacts__email-title" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          <a class="contacts__email-text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </p>
         <p class="contacts__address">
           <span class="contacts__address-title">адрес:</span>
@@ -105,9 +107,9 @@
         </p>
       </div>
       <div class="contacts__map">
-        <img class="contacts__map-img" src="http://placehold.it/320x456" width="320" height="456" alt="Карта местоположения">
+        <img class="contacts__map-img" src="img/map-mobile@1x.jpg" width="320" height="456" alt="Карта местоположения">
       </div>
-      <a href="#" class="btn  btn--contacts-write"></a>
+      <a href="#" class="btn  btn--contacts-write">Напишите нам</a>
     </section>
   </main>
   <footer class="footer">
@@ -125,21 +127,21 @@
   </footer>
   <section class="modal-cart">
     <div class="modal-cart__wrapper">
-      <h2>Добавить в корзину</h2>
-      <span>Выберите размер:</span>
+      <h2 class="modal-cart__title">Добавить в корзину</h2>
+      <span class="modal-cart__label-form">Выберите размер:</span>
       <form action="https://echo.htmlacademy.ru" method="post">
         <ul class="modal-cart__list">
           <li class="modal-cart__item">
-            <label class="modal-cart__label" for="size-1">S</label>
             <input class="modal-cart__input" id="size-1" type="radio" name="size" checked>
+            <label class="modal-cart__label" for="size-1">S</label>
           </li>
           <li class="modal-cart__item">
-            <label class="modal-cart__label" for="size-2">M</label>
             <input class="modal-cart__input" id="size-2" type="radio" name="size">
+            <label class="modal-cart__label" for="size-2">M</label>
           </li>
           <li class="modal-cart__item">
-            <label class="modal-cart__label" for="size-3">L</label>
             <input class="modal-cart__input" id="size-3" type="radio" name="size">
+            <label class="modal-cart__label" for="size-3">L</label>
           </li>
         </ul>
         <button class="btn  btn--modal-add" type="submit">Добавить</button>
