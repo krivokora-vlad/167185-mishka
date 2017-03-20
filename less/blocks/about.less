@@ -1,64 +1,76 @@
 .about {
-  &__wrapper {
+  .about__wrapper {
 
   }
-  &__list {
+  .about__list {
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  &__item {
+  .about__item {
     margin-bottom: 30px;
     font-family: @main-font;
     font-weight: 600;
     font-size: 17px;
-    &--flower::before {
-      content: '';
-      display: block;
-      padding-bottom: 25px;
-      background: url('../img/icon-feature-1.svg') no-repeat;
-      width: 33px;
-      height: 38px;
+    &--flower {
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 25px;
+        background: url('../img/icon-feature-1.svg') no-repeat;
+        width: 33px;
+        height: 38px;
+      }
     }
-    &--money::before {
+    &--money {
+      &::before {
       content: '';
       display: block;
       padding-bottom: 25px;
       background: url('../img/icon-feature-3.svg') no-repeat;
       width: 47px;
       height: 27px;
+      }
     }
-    &--like::before {
-      content: '';
-      display: block;
-      padding-bottom: 25px;
-      background: url('../img/icon-feature-5.svg') no-repeat;
-      width: 34px;
-      height: 27px;
+    &--like {
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 25px;
+        background: url('../img/icon-feature-5.svg') no-repeat;
+        width: 34px;
+        height: 27px;
+      }
     }
-    &--love::before {
-      content: '';
-      display: block;
-      padding-bottom: 25px;
-      background: url('../img/icon-feature-2.svg') no-repeat;
-      width: 35px;
-      height: 34px;
+    &--love {
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 25px;
+        background: url('../img/icon-feature-2.svg') no-repeat;
+        width: 35px;
+        height: 34px;
+      }
     }
-    &--rocket::before {
-      content: '';
-      display: block;
-      padding-bottom: 25px;
-      background: url('../img/icon-feature-4.svg') no-repeat;
-      width: 55px;
-      height: 23px;
+    &--rocket {
+      &::before {
+        content: '';
+        display: block;
+        padding-bottom: 25px;
+        background: url('../img/icon-feature-4.svg') no-repeat;
+        width: 55px;
+        height: 23px;
+      }
     }
-    &--gift::before {
-      content: '';
-      display: block;
-      padding-bottom: 25px;
-      background: url('../img/icon-feature-6.svg') no-repeat;
-      width: 33px;
-      height: 32px;
+    &--gift {
+      ::before {
+        content: '';
+        display: block;
+        padding-bottom: 25px;
+        background: url('../img/icon-feature-6.svg') no-repeat;
+        width: 33px;
+        height: 32px;
+      }
     }
   }
 }
