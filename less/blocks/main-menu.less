@@ -1,24 +1,48 @@
 .main-menu {
   .main-menu__open-menu {
-    background: url('../img/icon-menu-open.svg') no-repeat;
+    position: absolute;
+    top: 33px;
+    right: 30px;
+
     display: block;
     width: 20px;
     height: 14px;
+
+    background: url('../img/icon-menu-open.svg') no-repeat center;
+
   }
   .main-menu__close-menu {
-    background: url('../img/icon-menu-close.svg') no-repeat;
-    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    display: block;
     width: 21px;
-    height: 20px;
+    height: 21px;
+
+    background: url('../img/icon-menu-close.svg') no-repeat center;
   }
   .main-menu__menu-list {
+    position: absolute;
+    left: 0;
+    top: 80px;
+
     display: none;
+    width: 100%;
+    flex-direction: column;
     padding: 0;
     margin: 0;
+
+    background-color: @color-white;
+    line-height: 80px;
     list-style: none;
+    &--open {
+      display: flex;
+    }
   }
   .main-menu__menu-item {
-    padding-left: 45px;
+    padding-left: 75px;
+    border-bottom: 1px solid @color-gray-dark;
   }
   .main-menu__menu-link {
     font-size: 17px;

@@ -1,51 +1,93 @@
 .reviews {
+  padding: 30px 0;
+  .container();
   .reviews__wrapper {
-
+    .wrapper();
+    @media @tablet-widths {
+      background: url('../img/review@1x.jpg') no-repeat top left;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 80px;
+    }
   }
   .reviews__title {
+    margin: 0;
     font-family: @main-font;
     font-weight: 600;
     font-size: 25px;
+    @media @tablet-widths {
+      font-size: 43px;
+      line-height: 50px;
+      order: 0;
+    }
   }
   .reviews__list {
-
+    padding: 30px 0;
+    order: 2;
   }
   .reviews__item {
-
+    margin: 0;
+    order: 2;
+    display: flex;
+    flex-direction: column;
   }
   .reviews__text {
+    margin: 0;
+    margin-bottom: 30px;
     font-family: @main-font;
     font-weight: 400;
     font-size: 15px;
-    line-height: 24px;
+    line-height: 30px;
+    order: 2;
   }
   .reviews__user-name {
+    display: inline-block;
+    margin-bottom: 10px;
     font-family: @main-font;
     font-weight: 600;
+    order: 2;
   }
   .reviews__user-address {
+    display: inline-block;
     font-family: @main-font;
     font-weight: 400;
+    order: 2;
   }
   .reviews__controls {
-    padding: 12px 0;
-    border: 2px solid @color-gray-dark;
+    height: 50px;
     display: flex;
-    justify-content: space-around;
+    order: 2;
+    @media @tablet-widths {
+      width: 174px;
+    }
   }
   .reviews__btn {
     text-indent: -9999px;
+    order: 2;
     &--prev {
       display: block;
-      background: url('../img/icon-left-arrow.svg') no-repeat;
-      width: 51px;
-      height: 26px;
+      border: 1px solid @color-gray-dark;
+      border-collapse: collapse;
+      line-height: 50px;
+      background: url('../img/icon-left-arrow.svg') no-repeat center;
+      background-size: 51px 26px;
+      width: 50%;
+      @media @tablet-widths {
+        border: none;
+      }
     }
     &--next {
       display: block;
-      background: url('../img/icon-right-arrow.svg') no-repeat;
-      width: 51px;
-      height: 26px;
+      border-collapse: collapse;
+      border: 1px solid @color-gray-dark;
+      line-height: 50px;
+      background: url('../img/icon-right-arrow.svg') no-repeat center;
+      background-size: 51px 26px;
+      width: 50%;
+      @media @tablet-widths {
+        border: none;
+      }
     }
   }
 }
