@@ -5,6 +5,10 @@
     .wrapper();
     border-top: 1px solid @color-gray-dark;
     border-bottom: 1px solid @color-gray-dark;
+    @media @tablet-widths {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .production-process__title {
     margin: 25px 0;
@@ -13,6 +17,14 @@
     font-size: 17px;
     line-height: 24px;
     padding-left: 90px;
+    @media @tablet-widths {
+      order: 2;
+    }
+  }
+  .production-process__img {
+    @media @tablet-widths {
+      order: 1;
+    }
   }
   .production-process__description {
     width: 192px;
@@ -21,5 +33,10 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
+    @media @tablet-widths {
+      width: 100%;
+      padding: 0 40px;
+      order: 3;
+    }
   }
 }

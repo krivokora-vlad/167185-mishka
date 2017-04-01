@@ -13,12 +13,19 @@
     </a>
     <nav class="main-menu">
       <a href="#" class="main-menu__open-menu  main-menu__no-js"></a>
-      <ul class="main-menu__menu-list">
-        <li class="main-menu__menu-item"><a class="main-menu__menu-link">Каталог товаров</a></li>
-        <li class="main-menu__menu-item"><a href="form.html" class="main-menu__menu-link">Вязание на заказ</a></li>
-        <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Поиск по сайту</a></li>
-        <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Корзина: пока пуста</a></li>
+      <ul class="main-menu__menu-list  main-menu__menu-list--nav-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--catalog"><a href="catalog.html" class="main-menu__menu-link">Каталог товаров</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--order"><a href="form.html" class="main-menu__menu-link">Вязание на заказ</a></li>
       </ul>
+      <ul class="main-menu__menu-list  main-menu__menu-list--user-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--search"><a href="#" class="main-menu__menu-link">Поиск по сайту</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--basket"><a href="#" class="main-menu__menu-link">Корзина: пока пуста</a></li>
+      </ul>
+      <ul class="main-menu__menu-list  main-menu__menu-list--info-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--new-products"><a href="#" class="main-menu__menu-link">Новые поступления</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--sale"><a href="#" class="main-menu__menu-link">Распродажа</a></li>
+      </ul>
+      <p class="main-menu__info-delivery">Бесплатная доставка по России</p>
     </nav>
   </header>
   <main class="main">
@@ -30,45 +37,51 @@
             <a href="#" class="catalog__img-link">
               <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
             </a>
-            <div class="catalog__item-description">
-              <a href="#" class="catalog__item-link">
-                <h1 class="catalog__item-title">Зайчик-попрыгайчик</h1>
-              </a>
-              <span class="catalog__item-parametr">Рост 30 см, вес 200 г</span>
-            </div>
-            <div class="catalog__item-order">
-              <span class="catalog__item-cost">1 200 руб.</span>
-              <a href="#" class="catalog__item-add-cart"></a>
+            <div class="catalog__item-wrapper">
+              <div class="catalog__item-description">
+                <a href="#" class="catalog__item-link">
+                  <h1 class="catalog__item-title">Зайчик-попрыгайчик</h1>
+                </a>
+                <span class="catalog__item-parametr">Рост 30 см, вес 200 г</span>
+              </div>
+              <div class="catalog__item-order">
+                <span class="catalog__item-cost">1 200 руб.</span>
+                <a href="#" class="catalog__item-add-cart"></a>
+              </div>
             </div>
           </article>
           <article class="catalog__item">
             <a href="#" class="catalog__img-link">
               <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
             </a>
-            <div class="catalog__item-description">
-              <a href="#" class="catalog__item-link">
-                <h1 class="catalog__item-title">Корзинка для белья</h1>
-              </a>
-              <span class="catalog__item-parametr">Диаметр 15 см, высота 10 см</span>
-            </div>
-            <div class="catalog__item-order">
-              <span class="catalog__item-cost">690 руб.</span>
-              <a href="#" class="catalog__item-add-cart"></a>
+            <div class="catalog__item-wrapper">
+              <div class="catalog__item-description">
+                <a href="#" class="catalog__item-link">
+                  <h1 class="catalog__item-title">Корзинка для белья</h1>
+                </a>
+                <span class="catalog__item-parametr">Диаметр 15 см, высота 10 см</span>
+              </div>
+              <div class="catalog__item-order">
+                <span class="catalog__item-cost">690 руб.</span>
+                <a href="#" class="catalog__item-add-cart"></a>
+              </div>
             </div>
           </article>
           <article class="catalog__item">
             <a href="#" class="catalog__img-link">
               <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
             </a>
-            <div class="catalog__item-description">
-              <a href="#" class="catalog__item-link">
-                <h1 class="catalog__item-title">Зайчик-попрыгайчик</h1>
-              </a>
-              <span class="catalog__item-parametr">Диаметр 30 см, высота 30 см</span>
-            </div>
-            <div class="catalog__item-order">
-              <span class="catalog__item-cost">1 500 руб.</span>
-              <a href="#" class="catalog__item-add-cart"></a>
+            <div class="catalog__item-wrapper">
+              <div class="catalog__item-description">
+                <a href="#" class="catalog__item-link">
+                  <h1 class="catalog__item-title">Зайчик-попрыгайчик</h1>
+                </a>
+                <span class="catalog__item-parametr">Диаметр 30 см, высота 30 см</span>
+              </div>
+              <div class="catalog__item-order">
+                <span class="catalog__item-cost">1 500 руб.</span>
+                <a href="#" class="catalog__item-add-cart"></a>
+              </div>
             </div>
           </article>
         </div>
@@ -77,7 +90,7 @@
     <section class="production-process">
       <div class="production-process__wrapper">
         <h2 class="production-process__title">Процесс производства</h2>
-        <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Видео">
+        <img class="production-process__img"src="img/video-mobile@1x.jpg" width="260" height="150" alt="Видео">
         <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="btn  btn--production-process-checkout" href="#">Сделать заказ</a>
       </div>

@@ -14,6 +14,11 @@
   @media @tablet-widths {
     width: 230px;
   }
+  &--goods-order {
+    @media @tablet-widths {
+      width: 292px;
+    }
+  }
   &--modal-add {
     background-color: @color-green;
     border: none;
@@ -25,7 +30,7 @@
   &--reviews-write {
     margin-top: 30px;
     @media @tablet-widths {
-      width: 175px;
+      width: 174px;
       order: 1;
       margin: 0;
     }
@@ -34,10 +39,18 @@
     @media @tablet-widths {
       margin: 0 auto;
     }
+    @media @desktop-widths {
+      margin-left: 0;
+      margin-right: auto;
+    }
   }
   &--production-process-checkout {
     margin: 0 auto;
     margin-bottom: 30px;
     width: 192px;
+    @media @tablet-widths {
+      order: 4;
+      width: 100%;
+    }
   }
 }

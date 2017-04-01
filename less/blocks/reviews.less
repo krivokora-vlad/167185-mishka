@@ -9,6 +9,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding-top: 80px;
+      position: relative;
+      @media @desktop-widths {
+        padding-left: 125px;
+      }
     }
   }
   .reviews__title {
@@ -20,6 +24,9 @@
       font-size: 43px;
       line-height: 50px;
       order: 0;
+    }
+    @media @desktop-widths {
+      font-size: 53px;
     }
   }
   .reviews__list {
@@ -40,6 +47,9 @@
     font-size: 15px;
     line-height: 30px;
     order: 2;
+    @media @tablet-widths {
+      font-size: 17px;
+    }
   }
   .reviews__user-name {
     display: inline-block;
@@ -60,6 +70,9 @@
     order: 2;
     @media @tablet-widths {
       width: 174px;
+      position: absolute;
+      right: 60px;
+      bottom: 30px;
     }
   }
   .reviews__btn {

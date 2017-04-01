@@ -1,8 +1,16 @@
 .footer {
   padding: 20px 0;
   background-color: @color-gray;
-  .container();
+  @media @tablet-widths {
+    padding: 35px 0;
+  }
   .footer__wrapper {
+    .container();
     .wrapper();
+    @media @tablet-widths {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

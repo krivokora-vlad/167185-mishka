@@ -13,12 +13,19 @@
     </a>
     <nav class="main-menu">
       <a href="#" class="main-menu__open-menu  main-menu__no-js"></a>
-      <ul class="main-menu__menu-list">
-        <li class="main-menu__menu-item"><a href="catalog.html" class="main-menu__menu-link">Каталог товаров</a></li>
-        <li class="main-menu__menu-item"><a class="main-menu__menu-link">Вязание на заказ</a></li>
-        <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Поиск по сайту</a></li>
-        <li class="main-menu__menu-item"><a href="#" class="main-menu__menu-link">Корзина: пока пуста</a></li>
+      <ul class="main-menu__menu-list  main-menu__menu-list--nav-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--catalog"><a href="catalog.html" class="main-menu__menu-link">Каталог товаров</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--order"><a href="form.html" class="main-menu__menu-link">Вязание на заказ</a></li>
       </ul>
+      <ul class="main-menu__menu-list  main-menu__menu-list--user-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--search"><a href="#" class="main-menu__menu-link">Поиск по сайту</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--basket"><a href="#" class="main-menu__menu-link">Корзина: пока пуста</a></li>
+      </ul>
+      <ul class="main-menu__menu-list  main-menu__menu-list--info-link">
+        <li class="main-menu__menu-item  main-menu__menu-item--new-products"><a href="#" class="main-menu__menu-link">Новые поступления</a></li>
+        <li class="main-menu__menu-item  main-menu__menu-item--sale"><a href="#" class="main-menu__menu-link">Распродажа</a></li>
+      </ul>
+      <p class="main-menu__info-delivery">Бесплатная доставка по России</p>
     </nav>
   </header>
   <main class="main">
@@ -27,58 +34,70 @@
       <div class="form-order__wrapper">
         <p class="form-order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-order__group">
-            <label class="form-order__label">Тип</label>
-            <fieldset class="form-order__type-list">
-              <input class="form-order__radio" type="radio" id="accessory" name="type" value="accessory" checked>
-              <label class="form-order__radio-title" for="accessory">Аксессуар для интерьера</label>
-              <input class="form-order__radio" type="radio" id="children-toy" name="type" value="children-toy">
-              <label class="form-order__radio-title" for="children-toy">Детская игрушка</label>
-            </fieldset>
+          <div class="form-order__wrapper-group">
+            <div class="form-order__group">
+              <label class="form-order__label">Тип</label>
+              <fieldset class="form-order__type-list">
+                <input class="form-order__radio" type="radio" id="accessory" name="type" value="accessory" checked>
+                <label class="form-order__radio-title" for="accessory">Аксессуар для интерьера</label>
+                <input class="form-order__radio" type="radio" id="children-toy" name="type" value="children-toy">
+                <label class="form-order__radio-title" for="children-toy">Детская игрушка</label>
+              </fieldset>
+            </div>
           </div>
-          <div class="form-order__group">
-            <label class="form-order__label">Цвет</label>
-            <fieldset class="form-order__color-list">
-              <input class="form-order__checkbox" type="checkbox" id="white" name="color" value="white" checked>
-              <label class="form-order__checkbox-title" for="white">Белый</label>
-              <input class="form-order__checkbox" type="checkbox" id="gray" name="color" value="gray" checked>
-              <label class="form-order__checkbox-title" for="gray">Серый</label>
-              <input class="form-order__checkbox" type="checkbox" id="tiffany" name="color" value="tiffany">
-              <label class="form-order__checkbox-title" for="tiffany">&laquo;Тиффани&raquo;</label>
-              <input class="form-order__checkbox" type="checkbox" id="black" name="color" value="black">
-              <label class="form-order__checkbox-title" for="black">Черный</label>
-              <input class="form-order__checkbox" type="checkbox" id="pink" name="color" value="pink">
-              <label class="form-order__checkbox-title" for="pink">Розовый</label>
-              <input class="form-order__checkbox" type="checkbox" id="orange" name="color" value="orange">
-              <label class="form-order__checkbox-title" for="orange">Оранжевый</label>
-            </fieldset>
+          <div class="form-order__wrapper-group">
+            <div class="form-order__group">
+              <label class="form-order__label">Цвет</label>
+              <div class="form-order__color-list">
+                <input class="form-order__checkbox" type="checkbox" id="white" name="color" value="white" checked>
+                <label class="form-order__checkbox-title" for="white">Белый</label>
+                <input class="form-order__checkbox" type="checkbox" id="gray" name="color" value="gray" checked>
+                <label class="form-order__checkbox-title" for="gray">Серый</label>
+                <input class="form-order__checkbox" type="checkbox" id="tiffany" name="color" value="tiffany">
+                <label class="form-order__checkbox-title" for="tiffany">&laquo;Тиффани&raquo;</label>
+                <input class="form-order__checkbox" type="checkbox" id="black" name="color" value="black">
+                <label class="form-order__checkbox-title" for="black">Черный</label>
+                <input class="form-order__checkbox" type="checkbox" id="pink" name="color" value="pink">
+                <label class="form-order__checkbox-title" for="pink">Розовый</label>
+                <input class="form-order__checkbox" type="checkbox" id="orange" name="color" value="orange">
+                <label class="form-order__checkbox-title" for="orange">Оранжевый</label>
+              </div>
+            </div>
           </div>
-          <div class="form-order__group">
-            <label class="form-order__label">ФИО</label>
-            <fieldset class="form-order__fullname">
-              <label class="form-order__text-title" for="first-name">Имя:</label>
-              <input class="form-order__text-field" type="text" id="first-name" name="name" placeholder="Введите ваше имя*" required>
-              <label class="form-order__text-title" for="surname">Фамилия:</label>
-              <input class="form-order__text-field" type="text" id="last-name" name="name" placeholder="Укажите фамилию*" required>
-              <label class="form-order__text-title" for="patronymic">Отчество:</label>
-              <input class="form-order__text-field" type="text" id="patronymic" name="name" placeholder="Отчество, если желаете">
-            </fieldset>
+          <div class="form-order__wrapper-group">
+            <div class="form-order__group">
+              <label class="form-order__label">ФИО</label>
+              <div class="form-order__fullname">
+                <label class="form-order__text-title" for="first-name">Имя:</label>
+                <input class="form-order__text-field" type="text" id="first-name" name="name" placeholder="Введите ваше имя*" required>
+                <label class="form-order__text-title" for="surname">Фамилия:</label>
+                <input class="form-order__text-field" type="text" id="last-name" name="name" placeholder="Укажите фамилию*" required>
+                <label class="form-order__text-title" for="patronymic">Отчество:</label>
+                <input class="form-order__text-field" type="text" id="patronymic" name="name" placeholder="Отчество, если желаете">
+              </div>
+            </div>
           </div>
-          <div class="form-order__group">
-            <label class="form-order__label" for="tel">Тел</label>
-            <input class="form-order__number" type="tel" id="tel" name="tel" placeholder="+7 XXX XX XX*" required>
+          <div class="form-order__wrapper-group">
+            <div class="form-order__group">
+              <label class="form-order__label" for="tel">Тел</label>
+              <input class="form-order__number" type="tel" id="tel" name="tel" placeholder="+7 XXX XX XX*" required>
+            </div>
+            <div class="form-order__group">
+              <label class="form-order__label" for="email">E-mail</label>
+              <input class="form-order__email" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+            </div>
           </div>
-          <div class="form-order__group">
-            <label class="form-order__label" for="email">E-mail</label>
-            <input class="form-order__email" type="email" id="email" name="email" placeholder="Ваш Email*" required>
+          <div class="form-order__wrapper-group">
+            <div class="form-order__group">
+              <label class="form-order__label" for="additional">Доп</label>
+              <textarea class="form-order__textarea" id="additional" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </div>
-          <div class="form-order__group">
-            <label class="form-order__label" for="additional">Доп</label>
-            <textarea class="form-order__textarea" id="additional" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <div class="form-order__wrapper-footer">
+            <span class="form-order__description"><sup>*</sup>Поля обязательные для заполнения</span>
+            <button class="btn  btn--form-order-submit" type="submit">Отправить заказ</button>
+          </form>
           </div>
-          <span class="form-order__description"><sup>*</sup>Поля обязательные для заполнения</span>
-          <button class="btn  btn--form-order-submit" type="submit">Отправить заказ</button>
-        </form>
       </div>
     </section>
   </main>

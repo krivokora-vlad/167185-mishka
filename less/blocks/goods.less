@@ -1,6 +1,11 @@
 .goods {
   .container();
   padding: 30px 0;
+  @media @desktop-widths {
+    padding-top: 180px;
+    padding-left: 125px;
+    box-sizing: border-box;
+  }
   .goods__wrapper {
     .wrapper();
     @media @tablet-widths {
@@ -8,6 +13,12 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+    }
+    @media @desktop-widths {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   .goods__title {
@@ -19,6 +30,9 @@
       font-size: 43px;
       line-height: 50px;
     }
+    @media @desktop-widths {
+      font-size: 53px;
+    }
   }
   .goods__label {
     display: inline-block;
@@ -28,9 +42,17 @@
     font-size: 17px;
     text-transform: uppercase;
     color: @color-green;
-
     @media @tablet-widths {
-
+      position: absolute;
+      top: 7px;
+      right: 60px;
+      width: 100px;
+      text-align: center;
+    }
+    @media @desktop-widths {
+      position: absolute;
+      left: -105px;
+      top: 10px;
     }
   }
   .goods__description {
@@ -39,8 +61,8 @@
     font-size: 15px;
     line-height: 24px;
     @media @tablet-widths {
-      width: 290px;
-
+      width: 292px;
+      font-size: 17px;
     }
   }
   .goods__table {
@@ -53,6 +75,9 @@
     display: block;
     padding: 10px 0;
     border-bottom: 1px solid @color-gray-dark;
+    @media @tablet-widths {
+      width: 292px;
+    }
   }
   .goods__table-cell {
     &:first-child {
@@ -63,7 +88,12 @@
     display: block;
     margin: 30px 0;
     @media @tablet-widths {
-
+      position: absolute;
+      top: 50px;
+      right: 60px;
+    }
+    @media @desktop-widths {
+      top: -100px;
     }
   }
   .goods__price {
@@ -74,5 +104,11 @@
     font-size: 17px;
     line-height: 17px;
     text-align: center;
+    @media @tablet-widths {
+      width: 292px;
+      margin-top: 55px;
+      margin-bottom: 37px;
+      font-size: 20px;
+    }
   }
 }

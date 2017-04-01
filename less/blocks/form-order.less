@@ -1,5 +1,7 @@
 .form-order {
-  .container();
+  @media @mobile-widths-only {
+    .container();
+  }
   .form-order__title {
     background-color: @color-gray;
     text-align: center;
@@ -12,16 +14,38 @@
     font-size: 13px;
     line-height: 24px;
     margin: 0;
+    @media @tablet-widths {
+      font-size: 17px;
+      .container();
+      .wrapper();
+    }
   }
   .form-order__wrapper {
     .wrapper();
     padding-top: 20px;
     padding-bottom: 55px;
+    @media @tablet-widths {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .form-order__wrapper-group {
+    @media @tablet-widths {
+      &:nth-child(2n) {
+        background-color: @color-gray;
+      }
+    }
   }
   .form-order__group {
     position: relative;
     display: flex;
     flex-direction: column;
+    @media @tablet-widths {
+      flex-direction: row;
+      padding: 50px 0;
+      .container();
+      .wrapper();
+    }
   }
   .form-order__label {
     display: flex;
@@ -39,24 +63,42 @@
       background: @color-green;
       margin-left: 25px;
     }
+    @media @tablet-widths {
+      margin: 0;
+      align-self: flex-start;
+      width: 168px;
+      margin-top: 20px;
+      &::after {
+        display: none;
+      }
+    }
   }
   .form-order__type-list {
     display: flex;
+    flex-direction: column;
     border: none;
     padding: 0;
     margin: 0;
   }
   .form-order__color-list {
     display: flex;
+    flex-direction: column;
     border: none;
     padding: 0;
     margin: 0;
+    @media @tablet-widths {
+      flex-wrap: wrap;
+    }
   }
   .form-order__fullname {
     display: flex;
+    flex-direction: column;
     border: none;
     padding: 0;
     margin: 0;
+    @media @tablet-widths {
+      width: 100%;
+    }
   }
   .form-order__radio {
     display: none;
@@ -176,6 +218,10 @@
       line-height: 18px;
       color: rgba(0, 0, 0, 0.3);
     }
+    @media @tablet-widths {
+      background-color: transparent;
+      width: 100%;
+    }
   }
   .form-order__email {
     border: none;
@@ -187,6 +233,10 @@
       font-size: 17px;
       line-height: 18px;
       color: rgba(0, 0, 0, 0.3);
+    }
+    @media @tablet-widths {
+      background-color: transparent;
+      width: 100%;
     }
   }
   .form-order__textarea {
@@ -201,6 +251,11 @@
       line-height: 18px;
       color: rgba(0, 0, 0, 0.3);
     }
+    @media @tablet-widths {
+      min-height: 142px;
+      width: 100%;
+      background-color: transparent;
+    }
   }
   .form-order__description {
     display: block;
@@ -209,5 +264,17 @@
     font-family: @main-font;
     font-weight: 400;
     font-size: 14px;
+    @media @tablet-widths {
+      font-size: 17px;
+    }
+  }
+  .form-order__wrapper-footer {
+    @media @tablet-widths {
+      .container();
+      .wrapper();
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
   }
 }
