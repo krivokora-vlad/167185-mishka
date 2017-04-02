@@ -1,6 +1,6 @@
 .btn {
   display: block;
-  width: 200px;
+  width: 100%;
   font-family: @main-font;
   font-weight: 600;
   font-size: 17px;
@@ -10,6 +10,15 @@
   text-transform: uppercase;
   color: @color-black;
   border: 2px solid @color-black;
+  box-sizing: border-box;
+  @media @tablet-widths {
+    width: 230px;
+  }
+  &--goods-order {
+    @media @tablet-widths {
+      width: 292px;
+    }
+  }
   &--modal-add {
     background-color: @color-green;
     border: none;
@@ -17,5 +26,31 @@
   }
   &--form-order-submit {
     background-color: @color-white;
+  }
+  &--reviews-write {
+    margin-top: 30px;
+    @media @tablet-widths {
+      width: 174px;
+      order: 1;
+      margin: 0;
+    }
+  }
+  &--contacts-write {
+    @media @tablet-widths {
+      margin: 0 auto;
+    }
+    @media @desktop-widths {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+  &--production-process-checkout {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 192px;
+    @media @tablet-widths {
+      order: 4;
+      width: 100%;
+    }
   }
 }
