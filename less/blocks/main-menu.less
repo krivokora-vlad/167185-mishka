@@ -53,6 +53,7 @@
         position: absolute;
         bottom: 0;
         left: 50px;
+        z-index: 10;
         align-items: flex-start;
         padding: 0;
         line-height: 64px;
@@ -75,6 +76,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 5;
         display: flex;
         justify-content: flex-end;
         width: auto;
@@ -142,6 +144,12 @@
     font-weight: 600;
     text-decoration: none;
     color: @color-black;
+    &:hover {
+      color: @color-black-hover;
+    }
+    &:active {
+      color: @color-black-active;
+    }
   }
   .main-menu__info-delivery {
     display: none;

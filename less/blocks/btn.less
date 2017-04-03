@@ -11,6 +11,14 @@
   color: @color-black;
   border: 2px solid @color-black;
   box-sizing: border-box;
+  &:hover {
+    background-color: @color-black-btn;
+    color: @color-white;
+  }
+  &:active {
+    background-color: @color-black-btn;
+    color: @color-white-active;
+  }
   @media @tablet-widths {
     width: 230px;
   }
